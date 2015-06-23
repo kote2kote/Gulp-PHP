@@ -9,7 +9,7 @@
 
 ## 機能
 
-* SASS 自動コンパイル （gulp-sass）
+* SASS 自動コンパイル （gulp-sass） w/ CSS ソースマップ出力
 * 複数の JavaScript ファイルを scripts.js へ連結 & ミニファイ(gulp-uglify)
 * なので .js を追加するたびに \<script・・・/script\> を書かなくてもいい
 * 画像ファイルをロスレスで軽量化（png, jpg, gif, svg 対応）(imagemin)
@@ -114,17 +114,14 @@ $ npm install
 * 以下のモジュールが /node_modules にインストールされる
 
 1. gulp
-2. golp-connect 
+2. gulp-connect 
 3. gupl-connect-php
-4. gulp-filter
-5. gulp-imagemin
-6. gulp-sass
-7. gulp-less
-8. gulp-pleeease
-9. gulp-uglify
-10. main-bower-files
-11. vinyl-buffer
-12. vinyl-source-stream
-
+4. browser-sync
+5. gulp-filter
+6. gulp-imagemin
+7. gulp-pleeease
+8. gulp-ruby-sass
+9. gulp-sourcemaps
+10. gulp-uglify
 
 
