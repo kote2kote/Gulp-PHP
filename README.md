@@ -25,7 +25,7 @@
 $ mkdir myprojects
 $ cd myprojects
 $ git clone https://github.com/ontheroadjp/Peach.git
-$ cd SPA-01
+$ cd Peach
 $ npm install
 $ gulp build
 $ gulp
