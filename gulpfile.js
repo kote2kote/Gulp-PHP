@@ -1,5 +1,4 @@
 var gulp = require('gulp');
-var bower = require('main-bower-files');
 var sass = require('gulp-ruby-sass');
 var pleeease = require('gulp-pleeease');
 var sourcemaps = require('gulp-sourcemaps');
