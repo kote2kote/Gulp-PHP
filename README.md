@@ -24,7 +24,7 @@
 ```
 $ mkdir myprojects
 $ cd myprojects
-$ git clone https://github.com/ontheroadjp/SPA-01.git
+$ git clone https://github.com/ontheroadjp/Peach.git
 $ cd SPA-01
 $ npm install
 $ gulp build
