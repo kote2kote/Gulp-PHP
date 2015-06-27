@@ -24,7 +24,6 @@ gulp.task('ext', function () {
 });
 
 // Sass
-
 var sassoptions = {
 	style: 'expanded'
 	, sourcemap: true
@@ -32,7 +31,7 @@ var sassoptions = {
 
 gulp.task('sass', function () {
 	sass(input + 'sass/',{
-		style: 'expanded'
+		style: 'expanded' // compressed
 		, sourcemap: true
 	})
 	.pipe(pleeease({
@@ -45,7 +44,6 @@ gulp.task('sass', function () {
 });
 
 // Js-concat-uglify
-
 gulp.task('js', function() {
 	gulp.src([input + 'js/*.js'])
 	.pipe(concat('scripts.js'))
@@ -54,19 +52,7 @@ gulp.task('js', function() {
 	.pipe(reload({stream:true}));
 });
 
-gulp.task('bower', function() {
-	var jsFilter = filter([input + '**/*.js']);
-		gulp.src(bower())
-		.pipe(jsFilter)
-		.pipe(concat('scripts.js'))
-		.pipe(uglify({presserveComents: 'some'}))
-		.pipe(gulp.dest('build/js'))
-		.pipe(reload({stream:true}));
-});
-
-
 // Imagemin
-
 gulp.task('img', function() {
     gulp.src([input + 'img/**/*.{png,jpg,gif,svg}'])
         .pipe(imagemin({optimizationLevel: 7}))
@@ -74,13 +60,11 @@ gulp.task('img', function() {
 });
 
 // Static server
-
 gulp.task('php', function() {
 	php.server({ base: './build/', port: 9998, keepalive: true});
 });
 
 // for PHP
-
 gulp.task('browser-sync',['php'], function() {
     browserSync({
         //server: {
@@ -94,13 +78,11 @@ gulp.task('browser-sync',['php'], function() {
 });
 
 // Reload all browsers
-
 gulp.task('bs-reload', function () {
 browserSync.reload();
 });
 
 // Task for `gulp` command
-
 gulp.task('default',['browser-sync'], function() {
 	gulp.watch(input + 'sass/**/*.scss',['sass']);
 	gulp.watch(input + 'ext/**/*.*',['ext']);
