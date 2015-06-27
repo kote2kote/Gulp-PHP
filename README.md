@@ -7,6 +7,11 @@
 * SASS とか意識しなくても簡単に動かせる（自動コンパイル）
 * Rin3.0 ベース - http://sanographix.github.io/rin/
 
+(追記)
+
+* SASS コンパイルのデフォルトを expanded へ変更
+* ミニファイ（ompressed） する場合は gulpfile.js を修正する
+
 ## 機能
 
 * SASS 自動コンパイル （gulp-sass） w/ CSS ソースマップ出力
