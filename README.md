@@ -1,11 +1,10 @@
-# Peach 1.0.0
+# Gulp-PHP
 
 ## 説明
 
-* gulp を用いた node.js + PHP 実行/開発環境
+* gulp を用いた PHP 実行/開発環境
 * ちょっとしたサンプル実行にも便利
 * SASS とか意識しなくても簡単に動かせる（自動コンパイル）
-* Rin3.0 ベース - http://sanographix.github.io/rin/
 
 (追記)
 
@@ -14,14 +13,14 @@
 
 ## 機能
 
-* SASS 自動コンパイル （gulp-sass） w/ CSS ソースマップ出力
-* 複数の JavaScript ファイルを scripts.js へ連結 & ミニファイ(gulp-uglify)
-* なので .js を追加するたびに \<script・・・/script\> を書かなくてもいい
+* SASS 自動コンパイル （gulp-sass） w/ CSS ソースマップ
+* 複数の JavaScript ファイルを `scripts.js` へ連結 & ミニファイ(gulp-uglify)
+* なので .js を追加するたびに `<script・・・/script>` を書かなくてもいい
 * 画像ファイルをロスレスで軽量化（png, jpg, gif, svg 対応）(imagemin)
 * PHP 対応の WEB サーバー起動する（node.js & gulp-connect-php）
 * 全てのファイルを監視して変更あれば自動コンパイル & オートリロード（browserSync）
 * コンパイルなどの処理後のファイル出力先は /build ディレクトリに集約
-* なので /build 以下を丸ごと本番環境へアップロードすればデプロイ完了
+* なので `/build` 以下を丸ごと本番環境へアップロードすればデプロイ完了
 * normarise, Bootstrap, jQuery, Font-Awesome 組み込み済みの index.html ひな型
 
 ## クイックスタート
@@ -29,8 +28,8 @@
 ```
 $ mkdir myprojects
 $ cd myprojects
-$ git clone https://github.com/ontheroadjp/Peach.git
-$ cd Peach
+$ git clone https://github.com/ontheroadjp/Gulp-PHP.git 
+$ cd Gulp-PHP
 $ npm install
 $ gulp build
 $ gulp
